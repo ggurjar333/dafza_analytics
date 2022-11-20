@@ -43,7 +43,8 @@ st.markdown(
         - Check out [Data APIs](https://rapidapi.com/ggurjar333-Ihcu1gvzM24/api/companies-in-dubai-free-zones)
         - Ask a question on my [LinkedIn](https://www.linkedin.com/in/ggurjarsocl/)
         - Read my other articles on [Data Engineering](https://gauravgurjar.medium.com/)
-
+        """
+        )
 ## --- Displaying raw data ---
 # create a data elements and let the reader know the data is loading
 data_load_state = st.text('Loading data...')
