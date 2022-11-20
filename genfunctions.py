@@ -2,16 +2,18 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
-def configure():
-    load_dotenv()
+#def configure():
+#    load_dotenv()
 
 def getdata(status):
-    configure()
+#    configure()
     """Return the dataframe of response json of a URL"""
     datarequest = f'https://companies-in-dubai-free-zones.p.rapidapi.com/{status}'
     headers = {
-    "X-RapidAPI-Key": os.getenv('api_key'),
+#    "X-RapidAPI-Key": os.getenv('api_key'),
+    "X-RapidAPI-Key": st.secrets['api_key'],
     "X-RapidAPI-Host": "companies-in-dubai-free-zones.p.rapidapi.com"
 }
     
