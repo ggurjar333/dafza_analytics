@@ -61,12 +61,3 @@ st.title('Fastest growing industries in Dubai Free Zone - DAFZA as of Today')
 
 st.bar_chart(data=df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
 data_load_state.text('Done!')
-
-st.set_page_config(
-        page_title = "DAFZA Analytics",
-        page_icon='',
-        layout='wide',
-        initial_sidebar_state='expanded',
-        menu_items={
-            'About': ''}
-        )
