@@ -49,13 +49,14 @@ st.markdown(
 ## --- Displaying raw data ---
 # create a data elements and let the reader know the data is loading
 try:
-    data_load_state = st.text('Loading data...')
+#    data_load_state = st.text('Loading data...')
     rawdata = getdata(status = 'active-companies')
     countries = st.multiselect(
             "Choose countries", ['United Arab Emirates'])
     if not countries:
         st.error("Please select at least one country.")
     else:
+        data_load_state = st.text('Loading data...')
         indmetrics = rawdata.INDUSTRY.value_counts().reset_index()
         indmetrics.columns = ['INDUSTRY NAME', 'NUMBER OF COMPANIES']
 #indmetrics = pd.DataFrame(indmetrics)
