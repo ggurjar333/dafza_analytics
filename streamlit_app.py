@@ -66,4 +66,5 @@ try:
         st.title('Fastest growing industries in Dubai Free Zone - DAFZA as of Today')
 
         st.bar_chart(data=df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
-        data_load_state.text('Done!')
+
+data_load_state.text('Done!')
