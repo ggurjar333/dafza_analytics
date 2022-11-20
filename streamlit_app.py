@@ -48,8 +48,8 @@ st.markdown(
         )
 ## --- Displaying raw data ---
 # create a data elements and let the reader know the data is loading
-data_load_state = st.text('Loading data...')
 try:
+    data_load_state = st.text('Loading data...')
     rawdata = getdata(status = 'active-companies')
     countries = st.multiselect(
             "Choose countries", ['United Arab Emirates'])
