@@ -5,12 +5,29 @@ import streamlit as st # pip install streamlit
 # import streamlit_authenticator as stauth # pip install streamlit-authenticator
 import requests
 import pandas as pd # pip install pandas 
-from genfunctions import getdata
+# from genfunctions import getdata
 from deta import Deta # pip install deta
 
 # import plotly.express as px
 # import plotly.io as pio
 # pio.renderers.default = 'browser'
+
+# Generic functions
+def getdata(status):
+#    configure()
+    """Return the dataframe of response json of a URL"""
+    datarequest = f'https://companies-in-dubai-free-zones.p.rapidapi.com/{status}'
+    headers = {
+#    "X-RapidAPI-Key": os.getenv('api_key'),
+    "X-RapidAPI-Key": st.secrets['api_key'],
+    "X-RapidAPI-Host": "companies-in-dubai-free-zones.p.rapidapi.com"
+}
+    
+    response = requests.request("GET",url=datarequest, headers=headers)
+    return pd.read_json(response.json()).transpose()
+
+
+
 
 ## --- Displaying raw data ---
 # create a data elements and let the reader know the data is loading
