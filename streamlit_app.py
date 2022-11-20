@@ -56,7 +56,7 @@ try:
     if not countries:
         st.error("Please select at least one country.")
     else:
-        data_load_state = st.text('Loading data...')
+#        data_load_state = st.text('Loading data...')
         indmetrics = rawdata.INDUSTRY.value_counts().reset_index()
         indmetrics.columns = ['INDUSTRY NAME', 'NUMBER OF COMPANIES']
 #indmetrics = pd.DataFrame(indmetrics)
@@ -65,7 +65,6 @@ try:
 #df = px.bar(df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
 #df.show()
         st.title('Fastest growing industries in Dubai Free Zone - DAFZA as of Today')
-
         st.bar_chart(data=df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
         data_load_stat.text('Done!')
 
