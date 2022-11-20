@@ -31,7 +31,7 @@ def getdata(status):
 st.set_page_config(
         page_title="Home"
         )
-
+st.sidebar.header('Welcome')
 st.write("# Welcome to Free Zone - Analytics! ")
 st.sidebar.success("Select your analytics.")
 st.markdown(
