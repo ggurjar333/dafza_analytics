@@ -13,6 +13,7 @@ from deta import Deta # pip install deta
 # pio.renderers.default = 'browser'
 
 # Generic functions
+@st.cache
 def getdata(status):
 #    configure()
     """Return the dataframe of response json of a URL"""
@@ -48,16 +49,21 @@ st.markdown(
 ## --- Displaying raw data ---
 # create a data elements and let the reader know the data is loading
 data_load_state = st.text('Loading data...')
-
-rawdata = getdata(status = 'active-companies')
-indmetrics = rawdata.INDUSTRY.value_counts().reset_index()
-indmetrics.columns = ['INDUSTRY NAME', 'NUMBER OF COMPANIES']
+try:
+    rawdata = getdata(status = 'active-companies')
+    countries = st.multiselect(
+            "Choose countries", ['United Arab Emirates'])
+    if not countries:
+        st.error("Please select at least one country.")
+    else:
+        indmetrics = rawdata.INDUSTRY.value_counts().reset_index()
+        indmetrics.columns = ['INDUSTRY NAME', 'NUMBER OF COMPANIES']
 #indmetrics = pd.DataFrame(indmetrics)
 #st.dataframe(indmetrics)
-df = indmetrics.head(5)
+        df = indmetrics.head(5)
 #df = px.bar(df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
 #df.show()
-st.title('Fastest growing industries in Dubai Free Zone - DAFZA as of Today')
+        st.title('Fastest growing industries in Dubai Free Zone - DAFZA as of Today')
 
-st.bar_chart(data=df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
-data_load_state.text('Done!')
+        st.bar_chart(data=df, x='INDUSTRY NAME', y='NUMBER OF COMPANIES')
+        data_load_state.text('Done!')
