@@ -13,7 +13,7 @@ from deta import Deta # pip install deta
 # pio.renderers.default = 'browser'
 
 # Generic functions
-@st.cache
+
 def getdata(status):
 #    configure()
     """Return the dataframe of response json of a URL"""
