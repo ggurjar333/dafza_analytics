@@ -6,7 +6,7 @@ import streamlit as st # pip install streamlit
 import requests
 import pandas as pd # pip install pandas 
 # from genfunctions import getdata
-# from deta import Deta # pip install deta
+from deta import Deta # pip install deta
 
 # import plotly.express as px
 # import plotly.io as pio
