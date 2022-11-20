@@ -1,6 +1,7 @@
 # DAFZA - Analytics 
 Free Zone - Analytics is an online analytics tool built specifically for
 Free Zone based companies and industries.
+
 ** Select various analytics from the sidebar** to see some examples of 
 what analytical insights you can see!
 ### What to learn more?
