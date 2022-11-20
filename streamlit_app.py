@@ -11,7 +11,7 @@ from deta import Deta # pip install deta
 # import plotly.express as px
 # import plotly.io as pio
 # pio.renderers.default = 'browser'
-st.sidebar.header("Home")
+
 # Generic functions
 def getdata(status):
 #    configure()
@@ -28,7 +28,7 @@ def getdata(status):
 
 
 st.set_page_config(
-        page_title="Free Zones - Analytics"
+        page_title="Home"
         )
 
 st.write("# Welcome to Free Zone - Analytics! ")
