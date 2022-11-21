@@ -2,7 +2,7 @@
 # from pathlib import Path
 #!pip install streamlit-authenticator deta
 import streamlit as st # pip install streamlit
-# import streamlit_authenticator as stauth # pip install streamlit-authenticator
+import streamlit_authenticator as stauth # pip install streamlit-authenticator
 import requests
 import pandas as pd # pip install pandas 
 # from genfunctions import getdata
@@ -44,6 +44,7 @@ st.markdown(
         - Check out [Data APIs](https://rapidapi.com/ggurjar333-Ihcu1gvzM24/api/companies-in-dubai-free-zones)
         - Ask a question on my [LinkedIn](https://www.linkedin.com/in/ggurjarsocl/)
         - Read my other articles on [Data Engineering](https://gauravgurjar.medium.com/)
+        -  here to get latest updates.
         """
         )
 ## --- Displaying raw data ---
