@@ -6,8 +6,10 @@ st.set_page_config(page_title="Welcome", page_icon="📈")
 
 st.markdown("# Welcome to Free Zone - Analytics!")
 st.sidebar.header("About Dashboard")
-st.write(
-    """Free Zone - Analytics is an online analytics tool built specifically for
+
+st.markdown(
+        """
+        Free Zone - Analytics is an online analytics tool built specifically for
         Free Zone based companies and industries.
         ** Select various analytics from the sidebar** to see some examples of 
         what analytical insights you can see!
@@ -16,8 +18,9 @@ st.write(
         - Ask a question on my [LinkedIn](https://www.linkedin.com/in/ggurjarsocl/)
         - Read my other articles on [Data Engineering](https://gauravgurjar.medium.com/)
         - Register here to get latest updates.
- """
-)
+        """
+        )
+
 
 progress_bar = st.sidebar.progress(0)
 status_text = st.sidebar.empty()
