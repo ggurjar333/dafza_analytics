@@ -2,14 +2,21 @@ import streamlit as st
 import time
 import numpy as np
 
-st.set_page_config(page_title="Plotting Demo", page_icon="📈")
+st.set_page_config(page_title="Welcome", page_icon="📈")
 
-st.markdown("# Plotting Demo")
-st.sidebar.header("Plotting Demo")
+st.markdown("# Welcome to Free Zone - Analytics!")
+st.sidebar.header("About Dashboard")
 st.write(
-    """This demo illustrates a combination of plotting and animation with
-Streamlit. We're generating a bunch of random numbers in a loop for around
-5 seconds. Enjoy!"""
+    """Free Zone - Analytics is an online analytics tool built specifically for
+        Free Zone based companies and industries.
+        ** Select various analytics from the sidebar** to see some examples of 
+        what analytical insights you can see!
+        ### What to learn more?
+        - Check out [Data APIs](https://rapidapi.com/ggurjar333-Ihcu1gvzM24/api/companies-in-dubai-free-zones)
+        - Ask a question on my [LinkedIn](https://www.linkedin.com/in/ggurjarsocl/)
+        - Read my other articles on [Data Engineering](https://gauravgurjar.medium.com/)
+        - Register here to get latest updates.
+ """
 )
 
 progress_bar = st.sidebar.progress(0)
